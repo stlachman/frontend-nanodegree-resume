@@ -1,22 +1,36 @@
-var name = "Seth Lachman";
 
 var formattedName = HTMLheaderName.replace("%data%", name);
 
-var role = "Web Developer";
 
 var formattedRole = HTMLheaderRole.replace("%data%", role);
 
+var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
+var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+
+var HTMLbioPic = '<img src="%data%" class="biopic">';
+var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+
+
 var bio = {
-  "name": name,
-  "role": role,
+  "name": "Seth Lachman",
+  "role": "Front-End Web Developer",
   "contactInfo": {
     "mobile": "717-799-8671",
-    "email": "lachmanseth17@gmail.com"
+    "email": "lachmanseth17@gmail.com",
+    "github": "https://github.com/stlachman",
+    "twitter": "@SethLachm",
+    "location": "Austin, TX"
     },
-    "welcomeMessage": "Hello World!",
-    "skills": ["Awesomeness", "ruby", "js"],
+    "welcomeMessage": "Front Ender with a focus on the realness",
+    "skills": ["JavaScript", "HTML", "CSS", "jQuery"],
     "bioPic": "images/fry.jpg"
   }
+
 
 if (bio.skills.length > 0) {
    $("#header").append(HTMLskillsStart);
@@ -25,6 +39,8 @@ if (bio.skills.length > 0) {
    var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
    $("#skills").append(formattedSkill);
    var formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+   $("#skills").append(formattedSkill);
+   var formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
    $("#skills").append(formattedSkill);
  }
 
@@ -40,6 +56,7 @@ if (bio.skills.length > 0) {
      "description": "An app to suggest trails",
      "images": ["http://placehold.it/350x150", "http://placehold.it/350x150"]
    }]
+   //display :function
  }
 
   projects.display = function() {
@@ -78,6 +95,17 @@ var work = {
   "years": "1",
   "city": "Lancaster",
   "description": "I helped faciliated a healthier environment for those suffering from addiction."
+  }]
+}
+
+var work = {
+  "jobs": [{
+  "employer": "Trace Analytics",
+  "title": "Marketing Associate",
+  "location": "Austin, TX",
+  "dates": "string",
+  "description": ""
+  //display: function
   }]
 }
 
@@ -121,14 +149,16 @@ $("#main").append(internationalizeButton);
 var education =  {
  	"schools": [{
  		"name": "St. John's College",
- 		"city": "Santa Fe",
- 		"major": "Philosophy and History of Math and Science",
- 		"graudation": "2015"
+ 		"location": "Santa Fe",
+ 		"degree": "Bachelor of Arts",
+     "majors": ["Philosophy", "History of Mathematics and Science"],
+ 		"dates": "2015"
  	}, {
- 		"name": "Udacity",
- 		"city": "Anywhere",
- 		"major": "n/a",
- 		"graduation": "Near Future"
+ 		"onlineCourses": "Udacity",
+ 		"title": "Anywhere",
+ 		"school": "n/a",
+ 		"dates": "Near Future",
+     "url": "string"
  	}]
  }
 
@@ -137,8 +167,10 @@ var education =  {
   education["schoolCity"] = "Santa Fe";
 
 
+
+
   $("#mapDiv").append(googleMap);
 
 
- $("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+  $("#header").prepend(formattedRole);
+  $("#header").prepend(formattedName);
