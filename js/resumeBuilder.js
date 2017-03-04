@@ -10,7 +10,7 @@ var bio = {
     },
     "welcomeMessage": "Front Ender with a focus on the realness",
     "skills": ["JavaScript", "HTML", "CSS", "jQuery"],
-    "bioPic": "https://avatars1.githubusercontent.com/u/15080191?v=3&u=b8da0d7e2466361e0c9c3873d687a12dd47e8880&s=400"
+    "bioPic": "images/gh_me.jpeg"
   };
 
   var work = {
@@ -52,15 +52,15 @@ var education =  {
  		  "name": "St. John's College",
  		  "location": "Santa Fe",
  		  "degree": "Bachelor of Arts",
-      "majors": ["Philosophy", "History of Mathematics and Science"],
+      "majors": ["Philosophy", " History of Mathematics and Science"],
  		  "dates": "2015"
    }], 
  		"onlineCourses": [
      {
- 		"title": "Anywhere",
- 		"school": "n/a",
+ 		"title": "Front-End Web Development Nanodegree",
+ 		"school": "Udacity",
  		"dates": "Near Future",
-     "url": "string"
+     "url": "https://www.udacity.com/"
     }
   ]
 };
@@ -97,7 +97,7 @@ bio.display = function() {
 
 	$("#topContacts").append(HTMLlocation.replace("%data%", bio.contactInfo.location));
 
-	$("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
+	$("#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
 
 	if (bio.skills.length > 0) {
 		$('#header').append(HTMLskillsStart);
@@ -107,10 +107,6 @@ bio.display = function() {
 			var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
 			$('#skills').append(formattedSkill);
 		}
-  /* formattedSkill = HTMLskills.replace('%data%', bio.skills[1]);
-		$('#skills').append(formattedSkill);
-		formattedSkill = HTMLskills.replace('%data%', bio.skills[2]);
-		$('#skills').append(formattedSkill); */
 	}
 	
 	$("#footerContacts").append(HTMLmobile.replace("%data%", bio.contactInfo.mobile));
