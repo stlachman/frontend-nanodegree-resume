@@ -35,13 +35,13 @@ var bio = {
      "title": "Running App",
      "dates": "March 2016",
      "description": "An app to keep track of fitness level",
-     "images": ["http://placehold.it/350x150", "http://placehold.it/350x150"]
+     "images": ["images/running-pic-app.jpg"]
    }, 
    {
      "title": "Trails",
      "dates": "July 2016",
      "description": "An app to suggest trails",
-     "images": ["http://placehold.it/350x150", "http://placehold.it/350x150"]
+     "images": ["images/trail-finder.jpeg"]
    }
    ]
 };
